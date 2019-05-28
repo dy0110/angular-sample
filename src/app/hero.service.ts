@@ -16,6 +16,15 @@ export class HeroService {
     // 取得されたときにメッセージを送信
     // TODO: send the message _after_ fetching the heroes
     this.messageService.add("HeroService: fetched heroes");
+    // 全件を返す
     return of(HEROES);
+  }
+
+  getHero(id: number): Observable<Hero> {
+    // idから該当データを検索
+    // TODO: send the message _after_ fetching the hero
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    // マッチしたデータをリターン
+    return of(HEROES.find(hero => hero.id === id));
   }
 }

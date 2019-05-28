@@ -9,7 +9,6 @@ import { HeroService } from "../hero.service";
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
-  selectedHero: Hero;
 
   // サービスを注入する
   constructor(private heroService: HeroService) {}
@@ -17,10 +16,6 @@ export class HeroesComponent implements OnInit {
   ngOnInit() {
     // 初期化イベントの中でデータ取得する
     this.getHeroes();
-  }
-  // クリックイベントのハンドラーを定義
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
   }
   // サービスからデータを受け取る関数
   getHeroes(): void {

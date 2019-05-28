@@ -3,16 +3,12 @@
   <!-- *ngFor="let item of items" 繰り返し  -->
   <!--  (イベント)="イベントハンドラー" イベントハンドラーをセット -->
   <!-- [class.クラス名]="条件" クラスバインディング -->
-  <li
-    *ngFor="let hero of heroes"
-    (click)="onSelect(hero)"
-    [class.selected]="hero === selectedHero"
-  >
-    <span class="badge">
-      {{ hero.id }}
-    </span>
-    {{ hero.name }}
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">
+        {{ hero.id }}
+      </span>
+      {{ hero.name }}
+    </a>
   </li>
 </ul>
-<!-- [プロパティ]="渡す値" プロパティバインディング-->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
