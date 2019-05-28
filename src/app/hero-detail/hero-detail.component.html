@@ -1,0 +1,12 @@
+<!-- *ngIf="条件" 条件によって表示非表示を切り替える  -->
+<div *ngIf="hero">
+  <!-- | を囲って書式設定(表示値の加工を行う) -->
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{ hero.id }}</div>
+  <div>
+    <label
+      >name:
+      <input [(ngModel)]="hero.name" placeholder="name" />
+    </label>
+  </div>
+</div>
