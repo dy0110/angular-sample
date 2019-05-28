@@ -1,0 +1,15 @@
+<!-- | を囲って書式設定(表示値の加工を行う) -->
+<h2>{{ hero.name | uppercase }} Detail</h2>
+<div>
+  <span>
+    id:
+  </span>
+  {{ hero.id }}
+</div>
+<div>
+  <label
+    >name:
+    <!-- [(ngModel)] は、Angularの双方向データバインディング構文 -->
+    <input [(ngModel)]="hero.name" placeholder="name" />
+  </label>
+</div>

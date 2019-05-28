@@ -1,6 +1,6 @@
 # AngularSample
 
-[参考](https://qiita.com/seteen/items/43908e33e08a39612a07)
+[参考](https://angular.jp/tutorial)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
