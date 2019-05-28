@@ -24,7 +24,7 @@ export class HeroService {
     // idから該当データを検索
     // TODO: send the message _after_ fetching the hero
     this.messageService.add(`HeroService: fetched hero id=${id}`);
-    // マッチしたデータをリターン
+    // マッチしたデータを
     return of(HEROES.find(hero => hero.id === id));
   }
 }
