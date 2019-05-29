@@ -1,6 +1,15 @@
 # AngularSample
 
+公式チュートリアルを使ったサンプルアプリ
 [参考](https://angular.jp/tutorial)
+
+## ダッシュボード画面
+
+![ダッシュボード画面](image/xhh36-x3r8l.gif)
+
+## 一覧画面
+
+![一覧画面](image/svldr-vsnrh.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
