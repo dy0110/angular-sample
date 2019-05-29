@@ -25,4 +25,23 @@ export class HeroesComponent implements OnInit {
       this.heroes = heroes;
     });
   }
+  // ヒーローの追加
+  add( name: string ): void{
+    name = name.trim();
+    // 空の時は何もしない
+    if( !name ){
+      return ;
+    }
+    // サービスから追加メソッド呼び出し
+    this.heroService.addHero({ name } as Hero).subscribe(hero=>{
+      // 永続化が終わったら配列に追加
+      this.heroes.push(hero);
+    })
+  }
+
+  // ヒーローの削除
+  delete(hero: Hero): void {
+    this.heroes = this.heroes.filter(h => h !== hero);
+    this.heroService.deleteHero(hero).subscribe(); // API実行後に何もしなくてもsubscribeはする
+  }
 }
